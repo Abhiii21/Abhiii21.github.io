@@ -1,61 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="google-adsense-account" content="ca-pub-2559987217902955" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2559987217902955"
+      crossorigin="anonymous"
+    ></script>
+    <title>Bubble Shooter Game</title>
+    <script type="text/javascript" src="bubble-shooter-example.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather in India</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
 
-        .weather-container {
-            width: 300px;
-            margin: 50px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+      .weather-container {
+        width: 300px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
 
-        h1 {
-            margin-bottom: 10px;
-            color: #333;
-        }
+      h1 {
+        margin-bottom: 10px;
+        color: #333;
+      }
 
-        .weather-icon {
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-        }
+      .weather-icon {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+      }
 
-        p {
-            color: #666;
-        }
+      p {
+        color: #666;
+      }
 
-        .temperature {
-            font-size: 2em;
-            font-weight: bold;
-            color: #333;
-        }
+      .temperature {
+        font-size: 2em;
+        font-weight: bold;
+        color: #333;
+      }
 
-        .location {
-            margin-top: 20px;
-            color: #999;
-        }
+      .location {
+        margin-top: 20px;
+        color: #999;
+      }
     </style>
-</head>
-<body>
-    <div class="weather-container">
+  </head>
+
+  <body>
+    <div style="background-color: gray; display: flex">
+      <canvas
+        style="margin-left: 30%"
+        id="viewport"
+        width="628"
+        height="628"
+      ></canvas>
+      <a href="https://abhiii21.github.io/MyWeatherApp/" target="_blank"
+        >Weather of All Country</a
+      >
+
+      <div class="weather-container">
         <h1>Weather in India</h1>
-        <img src="https://www.weatherbit.io/static/img/icons/c01d.png" alt="Weather Icon" class="weather-icon">
+        <img
+          src="https://www.weatherbit.io/static/img/icons/c01d.png"
+          alt="Weather Icon"
+          class="weather-icon"
+        />
         <p class="temperature">25°C</p>
         <p class="description">Sunny</p>
         <p class="location">Delhi, India</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
