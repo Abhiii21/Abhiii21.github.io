@@ -7,10 +7,7 @@
     <title>Drink Water</title>
   </head>
   <body>
-    <script async type="application/javascript" src="https://a.pemsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e33" data-zoneid="5286718"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
-        <h2>V_0.3</h2>
+        <h2>V_0.4</h2>
 
     <h1>Drink Water</h1>
     <h3>Goal: 2 Liters</h3>
@@ -36,12 +33,21 @@
       <div class="cup cup-small">250 ml</div>
       <div class="cup cup-small">250 ml</div>
     </div>
-<script async type="application/javascript" src="https://a.pemsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e35" data-zoneid="5286732"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+
+    <div id="ad-container"></div>
+
+    <script>
+        var vastTagUrl = "https://s.magsrv.com/splash.php?idzone=5286768";
+        var adContainer = document.getElementById("ad-container");
+        
+        var videoAd = document.createElement("video");
+        videoAd.controls = true;
+        videoAd.src = vastTagUrl;
+        
+        adContainer.appendChild(videoAd);
+    </script>
+
     <script src="script.js"></script>
     <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e10" data-zoneid="5286728"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
   </body>
 </html>
