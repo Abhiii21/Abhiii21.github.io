@@ -1,50 +1,28 @@
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="336eae21a7570fd4ad634c67af2383c4f0832d55" content="336eae21a7570fd4ad634c67af2383c4f0832d55" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Drink Water</title>
-  </head>
-  <body>
-    <h2>V_4</h2>
-    <h1>Drink Water</h1>
-    <h3>Goal: 2 Liters</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Selection</title>
+</head>
+<body>
 
-    <div class="cup">
-      <div class="remained" id="remained">
-        <span id="liters"></span>
-        <small>Remained</small>
-      </div>
+<h1 id="selectedValue"></h1>
 
-      <div class="percentage" id="percentage"></div>
-    </div>
-
-    <p class="text">Select how many glasses of water that you have drank</p>
-
-    <div class="cups">
-      <div class="cup cup-small">250 ml</div>
-      <div class="cup cup-small">250 ml</div>
-      <div class="cup cup-small">250 ml</div>
-  
-    </div>
-    <script src="script.js"></script>
-
-
-    <script>
-(function(zhxli){
-var d = document,
-    s = d.createElement('script'),
-    l = d.scripts[d.scripts.length - 1];
-s.settings = zhxli || {};
-s.src = "\/\/infantilecombination.com\/aXWr5.w\/YeWgdYlTQ\/2\/9Mk\/Z_Tu9\/6Bbz2L5\/lWSjWsQT9\/NyTNMv4cN\/DhgT5KN\/C\/0q1nMaz\/g-0WO\/DPkX1O";
-s.async = true;
-l.parentNode.insertBefore(s, l);
-})({})
+<script>
+window.onload = function() {
+    var values = ["194757", "194755", "194753", "194751", "194749", "194747"];
+    var randomIndex = Math.floor(Math.random() * values.length);    
+    var selectedValue = values[randomIndex];
+    var admpid = selectedValue;
+    document.getElementById("selectedValue").innerText = "Selected Value: " + admpid;
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://js.onclckmn.com/static/onclicka.js';
+    script.setAttribute('data-admpid', admpid);
+    document.head.appendChild(script);
+};
 </script>
-    
-    <a href="https://wwp.psmad.com/redirect-zone/bba9f35d" target="_blank"> Abhi </a>
-    <a href="https://unequaledchair.com/bJ3YV.0xPh3/p/vlb/mxVlJpZBDf0/1vMpzQg-0COKD/cHw/LvT/Uwz/OHDlQ/4nNLz-Es" target="_blank"> HillTop Link </a>
 
-
-  </body>
+</body>
 </html>
