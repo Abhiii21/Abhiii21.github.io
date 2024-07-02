@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic Script Loading Example</title>
+    <title>Our CV</title>
 </head>
 <body>
-    <h1>Selected ID: <span id="selectedId"></span></h1>
+    <h1>Selected ID from First Script: <span id="selectedId"></span></h1>
+    <h2>Selected ID from Second Script: <span id="secondSelectedId"></span></h2>
 
-    <!-- Your script will be loaded dynamically here -->
+    <!-- Your scripts will be loaded dynamically here -->
     <script>
-        // Array of IDs
+        // Array of IDs for the first script
         var ids = [
             7678962, // Example ID 1
-            7678964, // Example ID 2 (add more IDs as needed)
-            7678966  // Example ID 3 (add more IDs as needed)
+            7678964, // Example ID 2
+            7678966  // Example ID 3
         ];
 
         // Function to select a random ID
-        function getRandomId() {
-            var randomIndex = Math.floor(Math.random() * ids.length);
-            return ids[randomIndex];
+        function getRandomId(array) {
+            var randomIndex = Math.floor(Math.random() * array.length);
+            return array[randomIndex];
         }
 
-        // Function to load the script dynamically
+        // Function to load the first script dynamically
         function loadDynamicScript(id) {
             var script = document.createElement('script');
             script.src = 'https://foomaque.net/400/' + id;
+            script.async = true;
             try {
                 (document.body || document.documentElement).appendChild(script);
             } catch(e) {
@@ -33,14 +35,44 @@
             }
         }
 
-        // Get a random ID
-        var selectedId = getRandomId();
+        // Get a random ID for the first script
+        var selectedId = getRandomId(ids);
         
-        // Display the selected ID in the heading
+        // Display the selected ID in the first heading
         document.getElementById('selectedId').textContent = selectedId;
 
         // Load the dynamic script with the selected ID
         loadDynamicScript(selectedId);
+
+
+        // Array of IDs for the second script
+        var secondIds = [
+            7678954, // Example ID 1
+            7678954, // Example ID 2
+            7678954  // Example ID 3
+        ];
+
+        // Function to load the second script dynamically
+        function loadSecondScript(id) {
+            var script = document.createElement('script');
+            script.src = '//thubanoa.com/1?z=' + id;
+            script.async = true;
+            script.setAttribute('data-cfasync', 'false');
+            try {
+                (document.body || document.documentElement).appendChild(script);
+            } catch(e) {
+                console.error('Failed to append script:', e);
+            }
+        }
+
+        // Get a random ID for the second script
+        var secondSelectedId = getRandomId(secondIds);
+
+        // Display the selected ID in the second heading
+        document.getElementById('secondSelectedId').textContent = secondSelectedId;
+
+        // Load the second script with the selected ID
+        loadSecondScript(secondSelectedId);
     </script>
 </body>
 </html>
