@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Dynamic Script Loading Example</title>
 </head>
 <body>
-<h5>Abhiiitech@786</h5>
-<h5 id="selectedValue"></h5>
-    
+    <h1>Selected ID: <span id="selectedId"></span></h1>
 
-<script>
-window.onload = function() {
-    var values = ["196507", "196509", "196511", "196513", "196515", "196517", "196519", "196521", "196523", "196525","196527", "196529", "196531", "196533", "196535", "196537", "196539", "196541", "196543", "196545","196551"];
-    var randomIndex = Math.floor(Math.random() * values.length);    
-    var selectedValue = values[randomIndex];
-    var admpid = selectedValue;
-    document.getElementById("selectedValue").innerText = "Selected Value: " + admpid;
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://js.onclckmn.com/static/onclicka.js';
-    script.setAttribute('data-admpid', admpid);
-    document.head.appendChild(script);
-};
-</script>
+    <!-- Your script will be loaded dynamically here -->
+    <script>
+        // Array of IDs
+        var ids = [
+            7678962, // Example ID 1
+            7678964, // Example ID 2 (add more IDs as needed)
+            7678966  // Example ID 3 (add more IDs as needed)
+        ];
 
+        // Function to select a random ID
+        function getRandomId() {
+            var randomIndex = Math.floor(Math.random() * ids.length);
+            return ids[randomIndex];
+        }
+
+        // Function to load the script dynamically
+        function loadDynamicScript(id) {
+            var script = document.createElement('script');
+            script.src = 'https://foomaque.net/400/' + id;
+            try {
+                (document.body || document.documentElement).appendChild(script);
+            } catch(e) {
+                console.error('Failed to append script:', e);
+            }
+        }
+
+        // Get a random ID
+        var selectedId = getRandomId();
+        
+        // Display the selected ID in the heading
+        document.getElementById('selectedId').textContent = selectedId;
+
+        // Load the dynamic script with the selected ID
+        loadDynamicScript(selectedId);
+    </script>
 </body>
 </html>
