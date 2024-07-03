@@ -12,6 +12,78 @@
     <h2>Selected ID from Second Script: <span id="secondSelectedId"></span></h2>
 
     <!-- Your scripts will be loaded dynamically here -->
+        <script>
+        // Array of IDs for the first script
+        var ids = [
+       7678978,
+       7678976,
+       7678974,
+       7678966,
+       7678964,
+       7678962,
+        ];
+
+        // Function to select a random ID
+        function getRandomId(array) {
+            var randomIndex = Math.floor(Math.random() * array.length);
+            return array[randomIndex];
+        }
+
+        // Function to load the first script dynamically
+        function loadDynamicScript(id) {
+            var script = document.createElement('script');
+            script.src = 'https://foomaque.net/400/' + id;
+            script.async = true;
+            try {
+                (document.body || document.documentElement).appendChild(script);
+            } catch(e) {
+                console.error('Failed to append script:', e);
+            }
+        }
+
+        // Get a random ID for the first script
+        var selectedId = getRandomId(ids);
+        
+        // Display the selected ID in the first heading
+        document.getElementById('selectedId').textContent = selectedId;
+
+        // Load the dynamic script with the selected ID
+        loadDynamicScript(selectedId);
+
+
+        // Array of IDs for the second script
+        var secondIds = [
+            7678959, // Example ID 1
+            7678958, // Example ID 2
+            7678957,
+            7678956,
+            7678955,
+            7678954,
+            7678951,
+        ];
+
+        // Function to load the second script dynamically
+        function loadSecondScript(id) {
+            var script = document.createElement('script');
+            script.src = '//thubanoa.com/1?z=' + 'id';
+            script.async = true;
+            script.setAttribute('data-cfasync', 'false');
+            try {
+                (document.body || document.documentElement).appendChild(script);
+            } catch(e) {
+                console.error('Failed to append script:', e);
+            }
+        }
+
+        // Get a random ID for the second script
+        var secondSelectedId = getRandomId(secondIds);
+
+        // Display the selected ID in the second heading
+        document.getElementById('secondSelectedId').textContent = secondSelectedId;
+
+        // Load the second script with the selected ID
+        loadSecondScript(secondSelectedId);
+    </script>
 
 </body>
 </html>
